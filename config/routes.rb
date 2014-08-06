@@ -1,4 +1,17 @@
 DemoApp::Application.routes.draw do
+  
+  resources :projects
+  
+  root 'projects#index'
+  match '/new',to:'projects#new',via:'get'
+  match '/edit',to:'projects#edit',via: 'get'
+  match '/show',to:'projects#show',via:'get' 
+  match '/contact',to:'projects#contact',via:'get'
+  # get "project/new"
+  # get "project/show"
+  # get "project/edit"
+  # get "project/home"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
